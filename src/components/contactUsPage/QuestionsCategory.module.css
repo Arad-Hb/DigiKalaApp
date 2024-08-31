@@ -1,0 +1,107 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    margin:30px auto;
+}
+.title{
+    font-size: 26px;
+font-weight: 800;
+color: #3f4064;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.icon{
+    font-size: 38px;
+    padding: 10px;
+    background-color:#f3fbfc ;
+color: #19bfd3;
+border-radius: 100%;
+}
+.text{
+font-weight: bold;
+}
+.content{
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+align-items: center;
+width:100%;
+margin-right: 80px;
+}
+.item{
+    transition: all .5s;
+    width: 100px;
+    height: 70px;
+   padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+
+}
+.item:hover{
+    /* transition: all .5s;
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset; */
+    transition: all .5s;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.itemsIcon{
+    
+}
+.itemsImage{
+
+}
+.itemsText{
+    color: #3f4064;    
+font-size: 12px;
+display: flex;
+flex-wrap: wrap;
+}
+@media (max-width: 480px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin:20px auto;
+    }
+   }
+     
+   /* Media Query for low resolution  Tablets, Ipads */
+   @media (min-width: 481px) and (max-width: 767px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin:20px auto;
+    }
+   }
+     
+   /* Media Query for Tablets Ipads portrait mode */
+   @media (min-width: 768px) and (max-width: 1024px){
+    
+   
+   }
+     
+   /* Media Query for Laptops and Desktops */
+   @media (min-width: 1025px) and (max-width: 1280px){
+   
+   }
+     
+   /* Media Query for Large screens */
+   @media (min-width: 1281px) {
+   
+   }

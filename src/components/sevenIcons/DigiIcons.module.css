@@ -1,0 +1,92 @@
+.iconsContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    text-align: center;
+    margin: 20px 40px;
+}
+.iconsCard{
+    flex-basis: 15%;
+}
+
+.icon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color:black;
+}
+.iconsLabel{
+    font-size: 11px;
+    font-weight: bold;
+    margin: 10px auto;
+}
+
+.dottedIconCard{
+    flex-basis: 15%;
+}
+.dottedIconLink{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color:black;
+    justify-content: center;
+}
+.dottedIcon{
+font-size: 38px;
+ background-color: #f0f0f1;
+ border-radius: 100%;
+ color: #a1a3a8;
+ padding: 3px;
+}
+.dottedIconLabel{
+    font-size: 11px;
+    font-weight: bold;
+    margin: 10px auto;
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .iconsContainer{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        
+    }
+    .iconsCard{  
+        flex-basis:25%; 
+        display: flex;
+        flex-direction: column;
+        
+        }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .iconsContainer{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        
+    }
+    .iconsCard{  
+        flex-basis:25%; 
+        display: flex;
+        flex-direction: column;
+        
+        }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .iconsContainer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: nowrap;
+        text-align: center;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+
+
