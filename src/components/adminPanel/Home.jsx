@@ -8,13 +8,13 @@ import { useSelector } from 'react-redux';
 import Counter from '../animation/Counter';
 import Chart from './Chart';
 
-const Home = ({productsCout,usersCount}) => {
+const Home = ({productsCout}) => {
     
     const orders=useSelector(state=>state.shoppingReducer)
 
     const data=[
         {name:"محصولات", Icon: TbShoppingBagPlus,count:productsCout},
-        {name:"مشتری ها", Icon:CgUserList,count:usersCount},
+        {name:"مشتری ها", Icon:CgUserList,count:140},
         {name:"سفارش ها", Icon: PiShoppingCart,count:orders.totalCount}
       ]
       const GetID=()=>{

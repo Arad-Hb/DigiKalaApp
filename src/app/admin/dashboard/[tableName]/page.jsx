@@ -2,7 +2,7 @@ import CustomTable from '@/components/adminPanel/CustomTable'
 import React from 'react'
 
 const getProducts=async(url)=>{
-  const response = await fetch(`http://localhost:9095/${url}`,{next:{revalidate:7000,tags:["adminTableproducts"]}})
+  const response = await fetch(`http://80.75.14.90:9090/${url}`,{next:{revalidate:7000,tags:["adminTableproducts"]}})
     if (!response.ok) {
        return console.log("error")
     }

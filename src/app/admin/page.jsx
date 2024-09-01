@@ -11,12 +11,10 @@ const SetArreyCount=(arrey)=>{
 const page = async() => {
   
   const productsData = await getData("products")
-  const usersData = await getData("users")
   const productsLength=SetArreyCount(productsData)
-  const usersLength=SetArreyCount(usersData)
   
   return (
-    <Home productsCout={productsLength} usersCount={usersLength} key="adminPanelsHomeComonent"/>
+    <Home productsCout={productsLength} key="adminPanelsHomeComonent"/>
   )
 }
 

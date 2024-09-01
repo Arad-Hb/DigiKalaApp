@@ -12,7 +12,7 @@ const CustomTable = ({item}) => {
       return (
         <div className={`${styles.container}`}>
           <div className={`${styles.addNewProduct}`}>
-            <CustomDropDown title={'AddNewProduct'} key={'AddNewProduct'}>
+            <CustomDropDown title={'فرم اضافه کردن محصول جدید'} key={'AddNewProduct'}>
               <AddProductForm/>
             </CustomDropDown>
           </div>

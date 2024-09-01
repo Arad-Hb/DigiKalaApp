@@ -6,7 +6,9 @@ import Image from 'next/image'
 
 const ProductImage = ({data}) => {
   const [imageToShow,setImageToShow]=useState(data.indexImageUrl)
-
+  const GetID=()=>{
+    return crypto.randomUUID()
+  }
   return (
     <div className={`${styles.outerContainer}`}>
         <div className={`${styles.originalImageContainer}`}>
@@ -15,7 +17,7 @@ const ProductImage = ({data}) => {
         <div className={`${styles.ThumbnailsContainer}`}>
             {data.images?(data.images.map(item=>{
               return(
-                <div onClick={()=>setImageToShow(item.original)} className={`${styles.Thumbnails}`}>
+                <div onClick={()=>setImageToShow(item.original)} className={`${styles.Thumbnails}`} key={GetID()}>
                   <Image src={item.thumbnail} alt='thumbnails' width={80} height={80} className={`${styles.ThumbnailImage}`}/>
                 </div>
               )

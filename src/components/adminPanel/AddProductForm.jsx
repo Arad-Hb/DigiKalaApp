@@ -5,23 +5,23 @@ import { revalidateTag } from 'next/cache'
 
 
 
-const Save=async(prd,img)=>{
+// const Save=async(prd,img)=>{
 
-    const requestBody=new FormData()
-    requestBody.append("data",JSON.stringify(prd))
-    requestBody.append("files",img.current.files[0])
-    try{
-        let requestOptions = {method: 'POST', body:requestBody };
-        const response = await fetch("http://localhost:9095/products", requestOptions);
-        const result = await response.text();
-        revalidateTag("adminTableproducts")
-        console.log(result);
-    }
-    catch(error){
-        console.log(error);
-    }
+//     const requestBody=new FormData()
+//     requestBody.append("data",JSON.stringify(prd))
+//     requestBody.append("files",img.current.files[0])
+//     try{
+//         let requestOptions = {method: 'POST', body:requestBody };
+//         const response = await fetch("http://localhost:9095/products", requestOptions);
+//         const result = await response.text();
+//         revalidateTag("adminTableproducts")
+//         console.log(result);
+//     }
+//     catch(error){
+//         console.log(error);
+//     }
     
-}
+// }
 
 const AddProductForm = () => {
     const [product,setProduct]=useState({id:1548566,name:"",description:"",price:0,stock:0,priceWithDiscount:0,indexImageUrl:"https://static.toiimg.com/thumb/msid-99594814,width-1280,height-720,resizemode-4/99594814.jpg",incredibleOffers:true,dailySuggest:true,images:[{ }]})
@@ -33,7 +33,7 @@ const AddProductForm = () => {
     const stockChangeHandler=(e)=>{setProduct(prev=>({...prev,stock:e.target.value}))}
     const submitHandler=(e)=>{
         e.preventDefault()
-        Save(product,productImage) 
+        // Save(product,productImage) 
     }
   return (
     <div className={`${styles.container}`}>
