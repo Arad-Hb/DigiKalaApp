@@ -45,11 +45,6 @@ margin: 10px 20px;
     display: flex;
     flex-direction: column;
     margin-top: 5px;
-}
-.itemLink{
- text-decoration: none;
- color: #101011;
+    color: #101011;
  font-size: 12px;
-
- margin: 0px 10px;
 }

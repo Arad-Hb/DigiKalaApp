@@ -1,6 +1,8 @@
 .topBannerImage{
     height:unset !important;
+    position: fixed;
 }
 .topBannerContainer{
     min-height:60px;
+    position: relative;
 }

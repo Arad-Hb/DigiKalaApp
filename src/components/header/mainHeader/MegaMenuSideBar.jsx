@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import styles from './MegaMenuSideBar.module.css'
 import { CiMobile3 } from "react-icons/ci"
@@ -12,11 +13,13 @@ import { FaCampground } from "react-icons/fa"
 import { MdOutlineSmartToy } from "react-icons/md"
 import { BiWrench } from "react-icons/bi"
 import { IoCarSportOutline } from "react-icons/io5"
-import Dispatcher from '@/components/features/Dispatcher'
+import { addId } from '@/redux/features/slices/menuSlice'
+import { useDispatch } from 'react-redux'
 
 
 const MegaMenuSideBar = () => {
 
+const dispatch=useDispatch()
 const sideNav=[
         {name:' موبایل', Icon: CiMobile3,id:0},
         {name:"کتاب و لوازم تحریر", Icon: LuPencilRuler,id:1},
@@ -35,21 +38,24 @@ const sideNav=[
         {name:"خودرو و موتورسیکلت", Icon: IoCarSportOutline,id:14},
         {name:"محصولات بومی و محلی", Icon: TbBrandReactNative,id:15}
     ]
-
+    const setContentHandler=(ID)=>{
+        dispatch(addId(ID))
+    }
+    
   return (
+    
     <div className={`${styles.outerContainer}`}>
         {
             sideNav.map(item=>{
                 const { name, Icon , id} = item;
+                
                 return(
-                <Dispatcher event={'onMouseEnter'} action={'addId'} value={id}>
-                    <div className={`${styles.categoryContainer}`} >
+                    <div className={`${styles.categoryContainer}`} onMouseEnter={()=>setContentHandler(id)} key={Icon}>
                         <div className={`${styles.link}`}>
                             <span className={`${styles.icon}`}><Icon/></span>
                             <span className={`${styles.text}`}>{name}</span>
                         </div>
                     </div>
-                </Dispatcher>    
                 )
             })
         }

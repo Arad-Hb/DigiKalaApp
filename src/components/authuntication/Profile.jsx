@@ -25,7 +25,7 @@ const data=Authentication()
           </div>
           <div className={`${styles.informationIcon}`}><FaRegPenToSquare /></div>
         </div>
-        <div className={`${styles.details}`}><AcountDetails/></div>
+        <div className={`${styles.details}`}><AcountDetails key={'for user panel'}/></div>
       </div>
       <div className={`${styles.mainContent}`}>
         <div  className={`${styles.varification}`}>
@@ -45,7 +45,7 @@ const data=Authentication()
           <div className={`${styles.detailsItems}`}>
             <div className={`${styles.item}`}>
               <span className={`${styles.itemImage}`}>
-                <Image src={"/images/blueCloud.svg"} width={80} height={90} alt='status'/>
+                <Image src={"/images/blueCloud.svg"} width={80} height={90} alt="blueCloud"/>
               </span>
               <span className={`${styles.itemCondition}`}>
                 <span className={`${styles.ConditionNumber}`}>0 سفارش</span>
@@ -54,7 +54,7 @@ const data=Authentication()
             </div>
             <div className={`${styles.item}`}>
               <span className={`${styles.itemImage}`}>
-                <Image src={"/images/greenBox.svg"} width={80} height={90} alt='status'/>
+                <Image src={"/images/greenBox.svg"} width={80} height={90} alt='greenBox'/>
               </span>
               <span className={`${styles.itemCondition}`}>
                 <span className={`${styles.ConditionNumber}`}>0 سفارش</span>
@@ -63,7 +63,7 @@ const data=Authentication()
             </div>
             <div className={`${styles.item}`}>
               <span className={`${styles.itemImage}`}>
-                <Image src={"/images/yellowBox.svg"} width={80} height={90} alt='status'/>
+                <Image src={"/images/yellowBox.svg"} width={80} height={90} alt='yellowBox'/>
               </span>
               <span className={`${styles.itemCondition}`}>
                 <span className={`${styles.ConditionNumber}`}>0 سفارش</span>
@@ -106,7 +106,7 @@ const data=Authentication()
           <div className={`${styles.detailsItems}`}>
             <div className={`${styles.item}`}>
               <span className={`${styles.itemImage}`}>
-                <Image src={"/images/blueCloud.svg"} width={80} height={90} alt='status'/>
+                <Image src={"/images/blueCloud.svg"} width={80} height={90} alt='responsive blueCloud'/>
               </span>
               <span className={`${styles.itemCondition}`}>
                 <span className={`${styles.ConditionNumber}`}>0</span>
@@ -115,7 +115,7 @@ const data=Authentication()
             </div>
             <div className={`${styles.item}`}>
               <span className={`${styles.itemImage}`}>
-                <Image src={"/images/greenBox.svg"} width={80} height={90} alt='status'/>
+                <Image src={"/images/greenBox.svg"} width={80} height={90} alt='responsive greenBox'/>
               </span>
               <span className={`${styles.itemCondition}`}>
                 <span className={`${styles.ConditionNumber}`}>0</span>
@@ -124,7 +124,7 @@ const data=Authentication()
             </div>
             <div className={`${styles.item}`}>
               <span className={`${styles.itemImage}`}>
-                <Image src={"/images/yellowBox.svg"} width={80} height={90} alt='status'/>
+                <Image src={"/images/yellowBox.svg"} width={80} height={90} alt='responsive yellowBox'/>
               </span>
               <span className={`${styles.itemCondition}`}>
                 <span className={`${styles.ConditionNumber}`}>0</span>
@@ -134,7 +134,7 @@ const data=Authentication()
           </div>
         </div>
         </div>
-        <div className={`${styles.responsiveFooter}`}><AcountDetails/></div>
+        <div className={`${styles.responsiveFooter}`}><AcountDetails key={"responsive user panel"}/></div>
       </div>
     </div>
   )

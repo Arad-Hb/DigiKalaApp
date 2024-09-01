@@ -5,7 +5,7 @@ import React from 'react'
 const layout = ({children}) => {
   return (
     <>
-        <MainLayout>
+        <MainLayout key="contactUsRouteMainLayout">
           <ContactUsLayout>
             {children}
           </ContactUsLayout>

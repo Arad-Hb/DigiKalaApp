@@ -5,22 +5,27 @@ import UserButton from '../header/mainHeader/UserButton'
 import LocationButton from '../header/mainHeader/LocationButton'
 import MegaMenuButton from '../header/mainHeader/MegaMenuButton'
 import AdminButton from '../adminPanel/AdminButton'
-import AddNewProduct from '../adminPanel/AddNewProduct'
 
 
 const CustomModule = ({children,button,rightPosition,leftPosition,topPosition}) => {
     const [buttonComponent,setButtonComponent]=useState()
+    const [rightP,setRightP]=useState()
+    const [leftP,setLeftP]=useState()
+    const [topP,setTopP]=useState()
     const [display,setDisplay]=useState("none")
 
     useEffect(() => {
         setButtonComponent(button) 
-    }, []);
+        setRightP(rightPosition)
+        setLeftP(leftPosition)
+        setTopP(topPosition)
+    }, [button]);
    
   const contentStyles={
     display:`${display}`,
-    right:rightPosition,
-    left:leftPosition,
-    top:topPosition
+    right:rightP,
+    left:leftP,
+    top:topP
     }
   return (
     <div className={`${styles.container}`}>
@@ -30,7 +35,6 @@ const CustomModule = ({children,button,rightPosition,leftPosition,topPosition}) 
           buttonComponent==='locationButton'?<LocationButton/>:
           buttonComponent==='megaMenuButton'?<MegaMenuButton/>:
           buttonComponent==='AdminButton'?<AdminButton/>:
-          buttonComponent==='AddNewProduct'?<AddNewProduct/>:
           <span onMouseLeave={()=>{setDisplay("none")}} className={`${styles.button}`}>{buttonComponent}</span>}
         </div>
         <div style={contentStyles} className={`${styles.children}`} onMouseLeave={()=>{setDisplay("none")}} onClick={()=>{setDisplay("none")}}>{children}</div>

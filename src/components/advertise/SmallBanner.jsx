@@ -8,7 +8,7 @@ const SmallBanner = () => {
   return (
     <div className={`${styles.outerContainer}`}>
         {data.smallBanners.map(item=>{
-            return<div className={`${styles.advertiseItem}`}><Image src={item.imageUrl}  className={`${styles.advertiseItemImage}`} alt='advertise' width={330} height={250} /></div>
+            return<div className={`${styles.advertiseItem}`}><Image src={item.imageUrl}  className={`${styles.advertiseItemImage}`} alt={item.imageUrl} width={330} height={250} /></div>
             
         })}
     </div>

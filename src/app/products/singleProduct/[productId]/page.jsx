@@ -8,7 +8,7 @@ const page = async(props) => {
     const productId=props.params.productId
     const singleProduct=await getData(`products/${productId}`)
   return (
-    <SingleProductCard data={singleProduct}/>
+    <SingleProductCard data={singleProduct} key="singleProductRouteCard"/>
   )
 }
 

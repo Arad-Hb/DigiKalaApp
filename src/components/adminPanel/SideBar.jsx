@@ -12,22 +12,25 @@ import { GrPieChart } from "react-icons/gr"
 
 const SideBar = () => {
   const data=[
-    {name:"خانه", Icon:TbLayoutDashboard ,id:0,url:'/'},
-    {name:"محصولات", Icon: TbShoppingBagPlus,id:1,url:'products'},
-    {name:"مشتری ها", Icon:CgUserList ,id:2,url:'/'},
-    {name:"سفارش ها", Icon: PiShoppingCart,id:3,url:'/'},
-    {name:"تخفیف ها", Icon: TbRosetteDiscount,id:4,url:'/'},
-    {name:"مقالات ", Icon: RiArticleLine,id:5,url:'/'},
-    {name:"چارت ها ", Icon: GrPieChart,id:6,url:'/'},
-    {name:"تنظیمات", Icon:AiOutlineSetting ,id:7,url:'/'}
+    {name:"خانه", Icon:TbLayoutDashboard ,id:100,url:'/'},
+    {name:"محصولات", Icon: TbShoppingBagPlus,id:101,url:'products'},
+    {name:"مشتری ها", Icon:CgUserList ,id:102,url:'/'},
+    {name:"سفارش ها", Icon: PiShoppingCart,id:103,url:'/'},
+    {name:"تخفیف ها", Icon: TbRosetteDiscount,id:104,url:'/'},
+    {name:"مقالات ", Icon: RiArticleLine,id:105,url:'/'},
+    {name:"چارت ها ", Icon: GrPieChart,id:106,url:'/'},
+    {name:"تنظیمات", Icon:AiOutlineSetting ,id:107,url:'/'}
   ]
+  const GetID=()=>{
+    return crypto.randomUUID()
+  }
   return (
     <div className={`${styles.container}`}>
       {
         data.map(item=>{
-          const { name, Icon , url} = item;
+          const { name, Icon , url,id} = item;
           return(
-          <NavLink url={`/admin/dashboard/${url}`}>
+          <NavLink url={`/admin/dashboard/${url}`} key={GetID()}>
             <div className={`${styles.item}`}>
               <span className={`${styles.icon}`}><Icon/></span>
               <span className={`${styles.name}`}>{name}</span>

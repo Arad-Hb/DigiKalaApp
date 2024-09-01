@@ -19,17 +19,17 @@ const Header = () => {
     <div className={`${styles.container}`}>
       <div className={`${styles.burgerIcon}`}><GiHamburgerMenu /></div>
         <div className={`${styles.dropDown}`}>
-            <CustomModule button={'AdminButton'} rightPosition={0}  topPosition={50}>
+            <CustomModule button={'AdminButton'} rightPosition={0}  topPosition={50} key={'AdminPanelHeaderButton'}>
                 <div className={`${styles.dropDownContent}`}>
                   <div className={`${styles.item}`}>
                     <span className={`${styles.icon}`}><AiOutlineSetting /></span>
                     <span className={`${styles.text}`}>تنظیمات </span>
                   </div>
-                  <NavLink url={'/admin'}>
+                  <NavLink url={'/admin'} key={'adminPanelHeaderLink'}>
                   <div className={`${styles.item}`}>
                     <span className={`${styles.icon}`}><RxExit /></span>
                     <span className={`${styles.text}`} onClick={()=>{Cookies.remove('admin')}}>
-                      <Dispatcher event={'onClick'} action={'setAdminIsLogedOut'}>خروج</Dispatcher>
+                      <Dispatcher event={'onClick'} action={'setAdminIsLogedOut'} key={'AdminPanelIsLogedOutButton'}>خروج</Dispatcher>
                     </span>
                   </div>
                   </NavLink>

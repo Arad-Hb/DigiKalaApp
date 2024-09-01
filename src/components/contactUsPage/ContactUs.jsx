@@ -5,15 +5,18 @@ import Data from '../../../files/contactUsData.json'
 import CustomDropDown from '@/components/features/CustomDropDown'
 import Image from 'next/image'
 
+
 const ContactUs = ({id}) => {
     
     const data=Data[0]
-   
+    const GetID=()=>{
+      return crypto.randomUUID()
+    }
   return (
     <div className={`${styles.outerContainer}`}>
     {data.questionsCategory.map(item=>{
         if(item.id===id){
-            return<div className={`${styles.container}`}>
+            return<div className={`${styles.container}`} key={GetID()}>
                 <div className={`${styles.title}`}>
                     <div className={`${styles.itemsIcon}`}>
                         <Image src={`/images${item.src}`} alt={item.title} width={40} height={40} className={`${styles.itemsImage}`}/>
@@ -22,7 +25,7 @@ const ContactUs = ({id}) => {
                 </div>
                 {
                     item.content.map(object=>{
-                    return<CustomDropDown title={object.question} content={object.answer}/>
+                    return<CustomDropDown title={object.question} content={object.answer}  key={GetID()}/>
                 })}
               </div> 
             }

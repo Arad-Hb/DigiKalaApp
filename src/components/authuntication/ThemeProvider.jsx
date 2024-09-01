@@ -25,7 +25,7 @@ const ThemeProvider = () => {
     <div className={`${styles.outerContainer}`}>
         <div className={`${styles.contentContainer}`}>
             <div className={`${styles.contentHeader}`}>
-                <Image src={'/images/logo.svg'} className={`${styles.logoImage}`} alt='digi kala' width={300} height={200}/>
+                <Image src={'/images/logo.svg'} className={`${styles.logoImage}`} alt='digi kala login panel' width={300} height={200}/>
             </div>
             <div className={`${styles.contentForm}`}><LoginSignupForm showSignup={selectSignUp}/></div>
         </div>

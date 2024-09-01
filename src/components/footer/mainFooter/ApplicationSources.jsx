@@ -5,6 +5,7 @@ import Data from '../../../../files/footerData.json'
 import NavLink from '@/components/features/NavLink'
 import Image from 'next/image'
 
+
 const ApplicationSources = () => {
     const data=Data[6]
   return (
@@ -18,13 +19,13 @@ const ApplicationSources = () => {
              {
                 data.applicationSources.map(item=>{
                 return(
-                    <NavLink url={item.link}>
+                    <NavLink url={item.link} key={item.link}>
                         <div className={`${styles.appSourcesButton}`}><Image src={item.src} alt={item.name} width={142} height={44}/></div>
                     </NavLink>
                     )
                 })
                 }
-                <NavLink url={'https://www.digikala.com/landings/new-app/'}>
+                <NavLink url={'https://www.digikala.com/landings/new-app/'} key="footerElseLink">
                     <div className={`${styles.otherAppSourcesButton}`}><BiDotsHorizontal className={`${styles.otherAppSources}`}/></div>
                 </NavLink>
             </div>

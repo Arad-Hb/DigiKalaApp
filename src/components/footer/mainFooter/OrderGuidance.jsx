@@ -3,6 +3,7 @@ import styles from './OrderGuidance.module.css'
 import Data from '../../../../files/footerData.json'
 import NavLink from '@/components/features/NavLink'
 
+
 const OrderGuidance = () => {
   const data=Data[4]
   return (
@@ -11,7 +12,7 @@ const OrderGuidance = () => {
         {
             data.orderGuidance.map(item=>{
                 return(
-                    <NavLink url={item.link}><div className={`${styles.link}`}>{item.text}</div></NavLink>
+                    <NavLink url={item.link} key={item.text}><div className={`${styles.link}`}>{item.text}</div></NavLink>
                 )
             })
         }

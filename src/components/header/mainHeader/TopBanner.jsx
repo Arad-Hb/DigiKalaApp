@@ -14,7 +14,7 @@ const TopBanner = async() => {
 
   return (
     <div className={`${styles.topBannerContainer}`} >
-        <Image className={`${styles.topBannerImage}`} src={data.imageUrl} alt='top banner' fill />
+        <Image className={`${styles.topBannerImage}`} src={data.imageUrl} alt='top banner' fill priority/>
     </div>
   )
 }

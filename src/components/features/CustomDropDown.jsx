@@ -1,22 +1,31 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from './CustomDropDown.module.css'
 import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io'
 
-const CustomDropDown = (props) => {
+const CustomDropDown = ({children,title,content}) => {
     const [display,setDisplay]=useState(false)
+    const [Title,setTitle]=useState()
+    const [Content,setContent]=useState(false)
+    useEffect(() => {
+
+      setTitle(title)
+      setContent(content)
+  
+    }, [title,content])
+    
   return (
     <div className={`${styles.container}`}>
         <div className={`${styles.dropDownTitle}`}>
             <div onClick={()=>setDisplay(!display)} className={`${styles.dropDownLink}`}>
-                <div className={`${styles.title}`}>{props.title}</div>
+                <div className={`${styles.title}`}>{Title}</div>
                 <div className={`${styles.icon}`}>{display ? <IoIosArrowUp />:<IoIosArrowDown />}</div>
             </div>
         </div>
         {display && 
           <div className={`${styles.dropDownContent}`}>
-          { props.content?<span>{props.content}</span>:
-                    <span>{props.children}</span>
+          { Content?<span>{Content}</span>:
+                    <span>{children}</span>
           }
           </div>}
     </div>

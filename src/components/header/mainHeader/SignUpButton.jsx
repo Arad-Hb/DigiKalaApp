@@ -7,7 +7,7 @@ const SignUpButton = () => {
 
   return (
     <div className={`${styles.outerContainer}`}>
-      <NavLink url={'/user'}>
+      <NavLink url={'/user'} key="enterButtonLink">
       <div className={`${styles.button}`}>
         <span className={`${styles.icon}`}><CgEnter /></span>
         <span className={`${styles.text}`}>ورود</span>

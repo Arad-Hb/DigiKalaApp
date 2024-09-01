@@ -4,6 +4,7 @@ import { TfiHeadphoneAlt } from "react-icons/tfi";
 import { HiOutlineMail } from "react-icons/hi";
 import NavLink from '../features/NavLink';
 
+
 const Connection = () => {
   return (
 <div className={`${styles.outerContainer}`}>
@@ -20,7 +21,7 @@ const Connection = () => {
             <div className={`${styles.icon}`}><HiOutlineMail /></div>
             <div className={`${styles.text}`}>
                 <div className={`${styles.textTitle}`}>ارسال پیام</div>
-                <div className={`${styles.formButton}`}><NavLink url={'/contactUs/form'}>فرم تماس با ما</NavLink></div>
+                <div className={`${styles.formButton}`}><NavLink url={'/contactUs/form'} key="contactUsForm">فرم تماس با ما</NavLink></div>
             </div>
         </div>
     </div>

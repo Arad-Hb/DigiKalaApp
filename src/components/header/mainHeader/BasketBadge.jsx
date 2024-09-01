@@ -1,16 +1,24 @@
 'use client'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from './BasketBadge.module.css'
 import { useSelector } from 'react-redux'
 
 const BasketBadge = () => {
+  
+  const [count, setCount] = useState();
   const state=useSelector(store=>store.shoppingReducer)
+
+  useEffect(() => {
+    
+    setCount(state.totalCount)
+  }, [state])
+
   return (
-    <>
+    <div>
     {
-      state.totalCount!==0?<div className={`${styles.badgeContainer}`}>{state.totalCount}</div>:null
+      count!==0?<div className={`${styles.badgeContainer}`}>{count}</div>:null
     }
-    </>
+    </div>
   )
 }
 

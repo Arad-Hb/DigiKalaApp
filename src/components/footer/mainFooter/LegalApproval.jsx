@@ -4,6 +4,7 @@ import Data from '../../../../files/footerData.json'
 import NavLink from '@/components/features/NavLink'
 import Image from 'next/image'
 
+
 const LegalApproval = () => {
     const data=Data[5]
   return (
@@ -12,7 +13,7 @@ const LegalApproval = () => {
             data.legalApproval.map(item=>{
                 return(
                     <div className={`${styles.legalLogo}`}>
-                        <NavLink url={item.link}><Image src={item.src} width={75} height={75} alt={item.name} className={`${styles.LegalImage}`}/></NavLink>
+                        <NavLink url={item.link} key={item.link}><Image src={item.src} width={75} height={75} alt={item.name} className={`${styles.LegalImage}`}/></NavLink>
                     </div>
                 )
             })

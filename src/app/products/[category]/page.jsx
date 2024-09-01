@@ -3,7 +3,6 @@ import { getData } from '@/serverActions/getData'
 import React from 'react'
 import styles from './page.module.css'
 
-
 const page = async(props) => {
 
   const categoryName=props.params.category
@@ -15,7 +14,7 @@ const page = async(props) => {
       categoryData.map(item=>{
         return(
           <div className={`${styles.item}`} >
-          <Card product={item}/>
+          <Card product={item} key={`singleProductRouteDynamicCat${item.id}`}/>
           </div>
         )
       })

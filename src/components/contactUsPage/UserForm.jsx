@@ -8,6 +8,7 @@ import UsersErrorMessage from '../authuntication/UsersErrorMessage'
 import * as Yup from 'yup'
 import NavLink from '../features/NavLink';
 
+
 const UserForm = () => {
     const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
     const emailRegExp= new RegExp(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)
@@ -38,7 +39,7 @@ const UserForm = () => {
             <div className={`${styles.title}`}>تماس با دیجی‌کالا</div>
             <div className={`${styles.commonQuestions}`}>
                 <div className={`${styles.commonQuestionsText}`}>لطفاً پیش از ارسال ایمیل یا تماس تلفنی، ابتداپرسش‌‌های متداول را مشاهده کنید.</div>
-                <NavLink url={'/contactUs'}><div className={`${styles.commonQuestionsButton}`}>پرسش‌‌های متداول</div></NavLink>
+                <NavLink url={'/contactUs'} key="commonQuestions"><div className={`${styles.commonQuestionsButton}`}>پرسش‌‌های متداول</div></NavLink>
             </div>
         </div>
         <div className={`${styles.main}`}>

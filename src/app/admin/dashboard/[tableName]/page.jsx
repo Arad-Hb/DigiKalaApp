@@ -14,10 +14,9 @@ const getProducts=async(url)=>{
 
 const page = async(props) => {
     const url=props.params.tableName
-    console.log(url);
     const itemData=await getProducts(url)
   return <div style={{marginTop:"5px",display:"flex",width:"100%",justifyContent:"center",overflowX:"scroll",overflowX:"scroll",backgroundColor:"#f2f2f2"}}>
-    <CustomTable item={itemData}/>
+    <CustomTable item={itemData} key="adminPanelProductTable"/>
     </div>
 }
 

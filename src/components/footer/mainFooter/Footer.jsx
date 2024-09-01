@@ -13,6 +13,7 @@ import LegalApproval from './LegalApproval'
 import Introduction from './Introduction'
 import ApplicationSources from './ApplicationSources'
 
+
 const Footer = () => {
   return (
     <div className={`${styles.outerContainer}`}>

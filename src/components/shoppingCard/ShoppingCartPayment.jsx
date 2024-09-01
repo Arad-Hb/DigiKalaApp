@@ -19,7 +19,7 @@ const ShoppingCartPayment = ({shoppingCardState}) => {
             </label>
         </div>
         <div className={`${styles.orderButton}`}>
-            <OrderButton/>
+            <OrderButton key="shoppingCardOrderButton"/>
         </div>
         <div className={`${styles.digiClub}`}>
             <div className={`${styles.digiClubTitle}`}>

@@ -17,7 +17,7 @@ const itemData=await getData(`products/search/${item}`)
       <div className={`${styles.container}`}>
         {itemData===null || itemData===undefined || itemData.length<1?<span className={`${styles.nothing}`}>موردی یافت نشد!</span>:
           itemData.map(item=>{
-            return<div className={`${styles.card}`}><Card product={item}/></div>
+            return<div className={`${styles.card}`}><Card product={item} key={`searchRoute${item.id}`}/></div>
           })
         }
       </div>

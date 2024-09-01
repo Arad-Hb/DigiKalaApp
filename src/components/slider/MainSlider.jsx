@@ -6,10 +6,9 @@ import CustomSkeleton from '../features/CustomSkeleton'
 
 
 const MainSlider = ({value}) => {
-
   return (
   <div>
-    <Suspense fallback={<CustomSkeleton component={'MainSlider'}/>}>
+    <Suspense fallback={<CustomSkeleton component={'MainSlider'} key="MainSliderSkeleton"/>}>
       <ReactImageGallery 
      items={value}
      autoPlay={true}

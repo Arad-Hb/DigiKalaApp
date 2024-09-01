@@ -3,6 +3,7 @@ import styles from './AboutUs.module.css'
 import Data from '../../../../files/footerData.json'
 import NavLink from '@/components/features/NavLink'
 
+
 const AboutUs = () => {
   const data=Data[2]
   return (
@@ -11,7 +12,7 @@ const AboutUs = () => {
         {
             data.aboutUs.map(item=>{
                 return(
-                    <NavLink url={item.link}><div className={`${styles.link}`}>{item.text}</div></NavLink>
+                    <NavLink url={item.link}><div className={`${styles.link}`} key={item.text}>{item.text}</div></NavLink>
                 )
             })
         }

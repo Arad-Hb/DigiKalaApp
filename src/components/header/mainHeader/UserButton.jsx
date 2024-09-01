@@ -6,7 +6,7 @@ import { PiUserList } from 'react-icons/pi'
 const UserButton = () => {
   return (
       <div className={`${styles.container}`}>
-        <NavLink url={'user/dashboard'}>
+        <NavLink url={'user/dashboard'} key="goToUserDashboardLink">
           <span className={`${styles.icon}`}><PiUserList /></span>
         </NavLink>
       </div>

@@ -12,7 +12,7 @@ const CustomTable = ({item}) => {
       return (
         <div className={`${styles.container}`}>
           <div className={`${styles.addNewProduct}`}>
-            <CustomDropDown title={'AddNewProduct'}>
+            <CustomDropDown title={'AddNewProduct'} key={'AddNewProduct'}>
               <AddProductForm/>
             </CustomDropDown>
           </div>

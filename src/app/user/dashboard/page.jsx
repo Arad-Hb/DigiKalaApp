@@ -5,8 +5,8 @@ import React from 'react'
 const index = () => {
   return (
     <>
-    <MainLayout>
-      <Profile/>
+    <MainLayout key="userRouteLayoute">
+      <Profile key="userRouteProfile"/>
     </MainLayout>
     </>
   )

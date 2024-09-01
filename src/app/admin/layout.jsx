@@ -8,9 +8,9 @@ const layout =({children}) => {
   return (
    
         <div className={`${styles.container}`}>
-          <div className={`${styles.header}`}><Header/></div>
+          <div className={`${styles.header}`}><Header key="adminPanelsLayoutHeader"/></div>
           <div className={`${styles.content}`}>
-            <div className={`${styles.sideBar}`}><SideBar/></div>
+            <div className={`${styles.sideBar}`}><SideBar key="adminPanelsLayoutSideBar"/></div>
             <div className={`${styles.Children}`}>{children}</div>
           </div>
         </div>

@@ -6,6 +6,7 @@ import { SiAparat } from "react-icons/si"
 import styles from './SocialMedia.module.css'
 import NavLink from '@/components/features/NavLink'
 
+
 const SocialMedia = () => {
   const data=[
     {name:'instagram',link:'https://www.instagram.com/digikalacom/', Icon: LuInstagram},
@@ -20,7 +21,7 @@ const SocialMedia = () => {
         {
             data.map(item=>{
                 const {link,Icon} = item;
-                return <NavLink url={link}><div className={`${styles.Link}`}><Icon/></div></NavLink>
+                return <NavLink url={link} key={link}><div className={`${styles.Link}`}><Icon/></div></NavLink>
             })
         }
         </div>

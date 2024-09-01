@@ -15,9 +15,9 @@ const Partners = () => {
         {
             data.partners.map(item=>{
                 return(
-                    <NavLink url={`${item.link}`}>
+                    <NavLink url={`${item.link}`} key={item.name}>
                         <div className={`${styles.partnerLink}`}>
-                            <img src={`/images/${item.name}.svg`}  className={`${styles.partnerImage}`} alt={`${item.name}`}/>
+                            <img src={`/images/${item.name}.svg`}  className={`${styles.partnerImage}`} alt={item.name}/>
                         </div>
                     </NavLink>
                 )

@@ -4,7 +4,7 @@ import React from 'react'
 const layout = ({children}) => {
   return (
     <>
-        <MainLayout>{children}</MainLayout>
+        <MainLayout key="searchRouteLayout">{children}</MainLayout>
     </>
   )
 }

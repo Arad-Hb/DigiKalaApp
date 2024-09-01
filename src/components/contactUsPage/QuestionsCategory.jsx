@@ -5,6 +5,7 @@ import Data from '../../../files/contactUsData.json'
 import NavLink from '../features/NavLink';
 import Image from 'next/image';
 
+
 const QuestionsCategory = () => {
     const data=Data[0]
     
@@ -17,7 +18,7 @@ const QuestionsCategory = () => {
         <div className={`${styles.content}`}>
            { data.questionsCategory.map(item=>{
             return(
-            <NavLink url={`/contactUs/${item.id}`}>
+            <NavLink url={`/contactUs/${item.id}`} key={item.id}>
                 <div className={`${styles.item}`}>
                     <div className={`${styles.itemsIcon}`}>
                         <Image src={`/images${item.src}`} alt={item.title} width={40} height={40} className={`${styles.itemsImage}`}/>

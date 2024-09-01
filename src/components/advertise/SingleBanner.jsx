@@ -8,7 +8,7 @@ const SingleBanner = () => {
   return (
     <div className={`${styles.outerContainer}`}>
     {data.fullWidthBanners.map(item=>{
-        return<div className={`${styles.advertiseItem}`}><Image src={item.imageUrl}  className={`${styles.advertiseItemImage}`} alt='advertise' width={800} height={150} /></div>
+        return<div className={`${styles.advertiseItem}`}><Image src={item.imageUrl}  className={`${styles.advertiseItemImage}`} alt={item.imageUrl} width={800} height={150} /></div>
         
     })}
 </div>

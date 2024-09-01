@@ -11,7 +11,7 @@ const CustomerServices = () => {
         {
             data.customerServices.map(item=>{
                 return(
-                    <NavLink url={item.link}><div className={`${styles.link}`}>{item.text}</div></NavLink>
+                    <NavLink url={item.link} key={item.text}><div className={`${styles.link}`}>{item.text}</div></NavLink>
                 )
             })
         }

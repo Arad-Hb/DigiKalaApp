@@ -3,7 +3,7 @@ import React from 'react'
 
 const page = () => {
   return (
-    <div><AdminLogInForm/></div>
+    <div><AdminLogInForm key="adminPanelLoginFormRoute"/></div>
   )
 }
 

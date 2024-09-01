@@ -10,6 +10,7 @@ import { ImInfo } from "react-icons/im"
 import Counter from '../productCard/Counter'
 import AddButton from '../productCard/AddButton'
 
+
 const OrderCard = ({data}) => {
   const state=useSelector(state=>state.shoppingReducer)
   return (
@@ -39,7 +40,7 @@ const OrderCard = ({data}) => {
             </div>
           </div>
         )}
-        <div className={`${styles.addButton}`}>{state.items.find(item=>item.id==data.id)?<Counter product={data} shoppingCardState={state}/>:data.stock!==0?<AddButton product={data} shoppingCardState={state}/>:<label className={`${styles.outOfStockLabel}`}>ناموجود</label>}</div>
+        <div className={`${styles.addButton}`}>{state.items.find(item=>item.id==data.id)?<Counter product={data} shoppingCardState={state} key={data.price}/>:data.stock!==0?<AddButton product={data} shoppingCardState={state} key={data.price}/>:<label className={`${styles.outOfStockLabel}`}>ناموجود</label>}</div>
       </div>
       <div className={`${styles.footer}`}>
         <div className={`${styles.guarantee}`}>

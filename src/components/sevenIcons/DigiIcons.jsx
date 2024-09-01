@@ -10,15 +10,15 @@ import CustomSkeleton from '../features/CustomSkeleton';
 const DigiIcons = async() => {
 
   const data=await getData("SevenIcons")
-  
+ 
   return (
-  <Suspense fallback={<CustomSkeleton component={'DigiIcons'}/>}>
+  <Suspense fallback={<CustomSkeleton component={'DigiIcons'} key="digiIconsSkeleton"/>}>
     <div className={`${styles.iconsContainer}`}>
         {
             data.map(item=>{
                 return(
                   <div className={`${styles.iconsCard}`}>
-                    <NavLink url={`/products/${item.url}`}>
+                    <NavLink url={`/products/${item.url}`} key={item.url}>
                       <div className={`${styles.icon}`}>
                         <Image src={`/images/${item.iconName}`} alt={item.label} height={40} width={40}/>
                         <label className={`${styles.iconsLabel}`}>{item.label}</label>
@@ -29,7 +29,7 @@ const DigiIcons = async() => {
             })
         }
         <div className={`${styles.dottedIconCard}`}>
-          <NavLink url={'/products'}>
+          <NavLink url={'/products'} key="elseLinkForDigiIcons">
            <div className={`${styles.dottedIconLink}`}>
             <IoIosMore  className={`${styles.dottedIcon}`}/>
             <label className={`${styles.dottedIconLabel}`}>بیشتر</label>

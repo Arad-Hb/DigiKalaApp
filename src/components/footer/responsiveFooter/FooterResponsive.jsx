@@ -6,20 +6,21 @@ import { RiShoppingCartLine } from "react-icons/ri"
 import { FaRegUser } from "react-icons/fa6"
 import NavLink from '@/components/features/NavLink'
 
+
 const FooterResponsive = () => {
     const navItems=[
-        {title:'خانه', Icon:BiSolidHomeSmile,url:'/'},
-        {title:'دسته بندی', Icon:TbCategory2,url:'/'},
-        {title:'سبد خرید', Icon:RiShoppingCartLine,url:'/shoppingCard'},
-        {title:'دیجی کالای من', Icon:FaRegUser,url:'/user'}
+        {id:230,title:'خانه', Icon:BiSolidHomeSmile,url:'/'},
+        {id:231,title:'دسته بندی', Icon:TbCategory2,url:'/'},
+        {id:232,title:'سبد خرید', Icon:RiShoppingCartLine,url:'/shoppingCard'},
+        {id:233,title:'دیجی کالای من', Icon:FaRegUser,url:'/user'}
     ]
   return (
     <div className={`${styles.outerContainer}`}>
         {
             navItems.map(item=>{
-                const {title , Icon , url} = item;
+                const {title , Icon , url,id} = item;
                 return <div className={`${styles.items}`}>
-                        <NavLink url={url}>
+                        <NavLink url={url} key={id}>
                             <div className={`${styles.itemsLink}`}>
                             <span className={`${styles.itemsIcon}`}><Icon/></span>
                             <span className={`${styles.itemsTitle}`}>{title}</span>

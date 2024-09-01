@@ -8,19 +8,18 @@ import CategoriesItems from "@/components/categorieItems/CategoriesItems";
 import MainSlider from "@/components/slider/MainSlider";
 import BrandsCarousel from "@/components/carousels/BrandsCarousel";
 import { getData } from "@/serverActions/getData";
-import { Suspense } from "react";
 import MainLayout from "@/components/mainLayout/MainLayout";
 import FooterResponsiveContent from "@/components/footer/responsiveFooter/FooterResponsiveContent";
+import { GetID } from "@/repository/GetID";
 
 
 
 export default async function Home() {
-
   const data=await getData("public/mainSlider")
-
+  
   return (
-    <div className={`${styles.outerContainer}`}>
-    <MainLayout>
+    <div className={`${styles.outerContainer}`}> 
+    <MainLayout key={GetID()}>
       <div><MainSlider value={data}/></div>
       <div><CategoriesItems/></div>
       <div><SingleBanner/></div>

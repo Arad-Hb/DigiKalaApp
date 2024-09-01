@@ -13,7 +13,7 @@ const BrandsCarousel = () => {
               <span className={`${styles.icon}`}><RiStarSmileLine /></span>
               <span className={`${styles.text}`}>محبوب‌ترین برندها</span>
             </div>
-            <div className={`${styles.carousel}`}><Carusel products={data} dataType={"brand"}/></div>
+            <div className={`${styles.carousel}`}><Carusel products={data} dataType={"brand"} key="brandsCarousel"/></div>
         </div>
 }
 

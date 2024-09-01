@@ -9,15 +9,17 @@ import Counter from '../productCard/Counter'
 
 
 const ShoppingCartItem = ({shoppingCardState}) => {
-
+    const GetID=()=>{
+        return crypto.randomUUID()
+      }
   return (
     <div className={`${styles.outerContainer}`}>
         {
             shoppingCardState.items.map(item=>{
                
-        return <div className={`${styles.shoppingItemContainer}`}>
+        return <div className={`${styles.shoppingItemContainer}`} key={GetID()}>
                     <div className={`${styles.imageContainer}`}>
-                        <NavLink url={`products/singleProduct/${item.id}`}>
+                        <NavLink url={`products/singleProduct/${item.id}`} key={GetID()}>
                             <Image src={item.indexImageUrl} alt={item.name} width={200} height={0} className={`${styles.indexImage}`}/>
                         </NavLink>
                     </div>
@@ -44,7 +46,7 @@ const ShoppingCartItem = ({shoppingCardState}) => {
                             </div>
                         </div>
                         <div className={`${styles.counterContainer}`}>
-                            <div className={`${styles.itemsCounter}`}><Counter product={item} shoppingCardState={shoppingCardState}/></div>
+                            <div className={`${styles.itemsCounter}`}><Counter product={item} shoppingCardState={shoppingCardState}  key={GetID()}/></div>
                             <div className={`${styles.itemsTotalPrice}`}>
                                 <label>
                                     {item.priceWithDiscount === 0 ? (

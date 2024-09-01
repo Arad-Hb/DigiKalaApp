@@ -22,7 +22,7 @@ const country=[
   return (
     <div className={`${styles.container}`}>
        {country.map(item=>{
-            return<ReactCountryFlag countryCode={item.url} className={`${styles.icon}`} svg />        
+            return<ReactCountryFlag key={item.name} countryCode={item.url} className={`${styles.icon}`} svg />        
           })}
     </div>
   )

@@ -3,7 +3,6 @@ import styles from './UserInfo.module.css'
 import { IoIosArrowBack } from 'react-icons/io'
 import AcountDetails from '@/components/authuntication/AcountDetails'
 
-
 const UserInfo =({user}) => {
   return (
       <div className={`${styles.userContent}`}>
@@ -11,7 +10,7 @@ const UserInfo =({user}) => {
             <span className={`${styles.nameText}`}>{user.name} {user.lastname}</span>
             <span className={`${styles.nameIcon}`}><IoIosArrowBack /></span>
           </div>
-          <div><AcountDetails/></div>
+          <div><AcountDetails key="userInfoButtonsDetails"/></div>
       </div>
   )
 }

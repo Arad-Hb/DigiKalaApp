@@ -6,7 +6,7 @@ import Dispatcher from '../features/Dispatcher'
 const IncrementButton = ({product}) => {
 
   return (
-    <Dispatcher event={'onClick'} action={'increaseItem'} value={product.id}>
+    <Dispatcher event={'onClick'} action={'increaseItem'} value={product.id} key={product.id}>
       <button className={`${styles.counterButton}`}><HiPlusSm /></button>
     </Dispatcher>
   )

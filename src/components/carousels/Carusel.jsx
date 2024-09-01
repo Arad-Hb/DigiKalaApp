@@ -8,7 +8,6 @@ import { PrevArrow } from './CaruselArrow';
 import Card from "../productCard/Card";
 import NavLink from "../features/NavLink";
 import Image from "next/image";
-import CustomSkeleton from "../features/CustomSkeleton";
 
 
 const Carusel = ({products,dataType}) => {
@@ -111,8 +110,8 @@ const Carusel = ({products,dataType}) => {
       >
           {products.map((item) => (
             dataType==="product"?<Card key={item.id} product = {item}/>:
-            <NavLink>
-                <Image width={110} height={90} style={{ height: 'auto',alignmentBaseline:'central' ,marginBottom:'30px'}} alt='brand' src={`/images/${item.imageUrl}`} />
+            <NavLink key={item.id}>
+                <Image width={110} height={90} style={{ width:'auto',height: 'auto',alignmentBaseline:'central' ,marginBottom:'30px'}} alt={item.imageUrl} src={`/images/${item.imageUrl}`} />
             </NavLink>
           ))}
       </Slider>
