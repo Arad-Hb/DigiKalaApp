@@ -7,9 +7,9 @@ export default function middleware(request){
             return NextResponse.redirect(`${request.nextUrl.origin}/user`)
         }
     }
-    if (request.nextUrl.pathname.startsWith('/admin')){
-        if(request.cookies.get('admin') === undefined){
-            return NextResponse.redirect(new URL('/landing', request.url))
-        }
-    }
+    // if (request.nextUrl.pathname.startsWith('/admin')){
+    //     if(request.cookies.get('admin') === undefined){
+    //         return NextResponse.redirect(`${request.nextUrl.origin}/admin`)
+    //     }
+    // }
 }

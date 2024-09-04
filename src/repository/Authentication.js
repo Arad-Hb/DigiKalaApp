@@ -13,3 +13,13 @@ export const Authentication=()=>{
         return data.user
     }
 }
+export const AdminAuthentication=()=>{
+   
+    const adminIsLogedIn=Cookies.get('admin')
+    if(adminIsLogedIn===undefined || adminIsLogedIn===null){
+        return false
+    }
+    else{
+        return true
+    }
+}
