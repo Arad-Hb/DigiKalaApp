@@ -25,6 +25,7 @@ export default function RootLayout({children}) {
     <html lang="fa">
       <head>
         <meta name="google-site-verification" content="35nrG3scit2tyykXnUvj09NlUGj__hiNH5LyWlrGnIM" />
+        <link rel="shortcut icon" href="/HB.png" type="image/png"></link>
       </head>
       <body  className={iranSansFont.className }>
       <StoreProvider>
