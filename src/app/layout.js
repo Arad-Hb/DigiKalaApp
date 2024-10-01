@@ -25,7 +25,7 @@ export default function RootLayout({children}) {
     <html lang="fa">
       <head>
         <meta name="google-site-verification" content="35nrG3scit2tyykXnUvj09NlUGj__hiNH5LyWlrGnIM" />
-        <link rel="icon" sizes="32x32" type="image/png" href="public\images\HB.png"/>
+        <link rel="icon" href="/public/images/HB.ico" />
       </head>
       <body  className={iranSansFont.className }>
       <StoreProvider>
